@@ -1,8 +1,7 @@
-name: My GitHub Action
-
+name: keda-runner
 on:
   
-  workflow_dispatch:  # Define the manual trigger event
+  workflow_dispatch:   
 
 jobs:
   my_job:
@@ -10,13 +9,10 @@ jobs:
 
     steps:
       - name: Check out code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Sleep for 10 minutes
-        run: |
-          echo "Sleeping for 10 minutes..."
-          sleep 600
-          echo "Finished sleeping."
+        run: sleep 1800s
+        shell: bash
 
-      - name: Your Other Steps
-        # Add your other workflow steps here
+    
