@@ -1,14 +1,12 @@
 name: My GitHub Action
 
 on:
-  push:
-    branches:
-      - main
+  
   workflow_dispatch:  # Define the manual trigger event
 
 jobs:
   my_job:
-    runs-on: keda-runner
+    runs-on: [ keda-runner ]
 
     steps:
       - name: Check out code
